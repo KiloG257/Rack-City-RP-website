@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whitelist — Rack City RP</title>
+  <meta name="description" content="Apply for the Rack City RP whitelist." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600&family=Chakra+Petch:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a class="brand" href="index.html" aria-label="Rack City RP home">
+      <img src="images/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'" />
+      <span class="brand-text">RACK CITY <em>RP</em></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="city.html">The City</a>
+      <a href="rules.html">Rules</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="whitelist.html" class="active">Whitelist</a>
+    </nav>
+
+    <div class="nav-actions">
+      <span class="chip chip-pending" id="statusChip">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M17 5.5a3 3 0 010 5.5M19 14.5c1.9.8 3 2.6 3 5.5"/></svg>
+        <span id="statusText">Link Pending</span>
+      </span>
+      <button class="chip chip-copy" id="copyIpNav" type="button">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V5a1 1 0 011-1h10"/></svg>
+        Copy IP
+      </button>
+      <a class="btn btn-solid btn-sm" href="#" data-join>Join the City</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="kicker">Whitelist</p>
+        <h1 class="h2">Earn your <span class="red">place</span></h1>
+        <p class="lede">Rack City is whitelisted to keep the roleplay serious. Tell us who you are and what story you want to tell.</p>
+        <div class="cta">
+          <a class="btn btn-solid btn-lg" href="#" id="applyLink" target="_blank" rel="noopener">Apply for Whitelist</a>
+          <a class="btn btn-ghost btn-lg" href="#" id="discordLink" target="_blank" rel="noopener">Join Discord</a>
+        </div>
+        <div class="discord-embed">
+          <iframe src="https://discord.com/widget?id=1405967304247869581&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="join">
+    <div class="wrap footer-in">
+      <span class="brand-text">RACK CITY <em>RP</em></span>
+      <span class="fineprint">© <span id="year"></span> Rack City RP. Not affiliated with or endorsed by Rockstar Games or Take-Two Interactive.</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,12 +1,4 @@
-/* ============================================================
-   RACK CITY RP — SITE CONFIG
-   Fill these in when your server is live, then save + push.
-   ============================================================ */
-const CONFIG = {
-  serverIp: "5.175.213.56:30120",            // e.g. "connect cfx.re/join/abc123"  (leave "" while link is pending)
-  discordUrl: "https://discord.gg/G49CB5U6Pu",          // e.g. "https://discord.gg/yourinvite"
-  whitelistUrl: ""         // e.g. a Discord channel or Google Form link
-};
+/* Settings live in config.js */
 
 const $ = (s) => document.querySelector(s);
 const toast = $("#toast");
@@ -19,7 +11,7 @@ function showToast(msg) {
 }
 
 /* Footer year */
-$("#year").textContent = new Date().getFullYear();
+if ($("#year")) $("#year").textContent = new Date().getFullYear();
 
 /* Nav background on scroll */
 const nav = $("#nav");
@@ -29,12 +21,14 @@ window.addEventListener("scroll", onScroll, { passive: true });
 
 /* Live / pending state */
 const isLive = Boolean(CONFIG.serverIp);
-if (isLive) {
+if (isLive && $("#statusChip")) {
   $("#statusChip").classList.remove("chip-pending");
   $("#statusChip").classList.add("chip-pending", "live");
   $("#statusText").textContent = "Server Live";
-  $("#notice").classList.add("live");
-  $("#noticeText").textContent = "Server online — jump in";
+  if ($("#notice")) {
+    $("#notice").classList.add("live");
+    $("#noticeText").textContent = "Server online — jump in";
+  }
 }
 
 /* Copy IP */
@@ -66,6 +60,7 @@ document.querySelectorAll("[data-join]").forEach((el) =>
 /* External links */
 function wire(id, url, label) {
   const el = $(id);
+  if (!el) return;
   if (url) {
     el.href = url;
   } else {
