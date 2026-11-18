@@ -3,8 +3,8 @@
    Fill these in when your server is live, then save + push.
    ============================================================ */
 const CONFIG = {
-  serverIp: "",            // e.g. "connect cfx.re/join/abc123"  (leave "" while link is pending)
-  discordUrl: "",          // e.g. "https://discord.gg/yourinvite"
+  serverIp: "5.175.213.56:30120",            // e.g. "connect cfx.re/join/abc123"  (leave "" while link is pending)
+  discordUrl: "https://discord.gg/wbwdGgUwBj",          // e.g. "https://discord.gg/yourinvite"
   whitelistUrl: ""         // e.g. a Discord channel or Google Form link
 };
 
