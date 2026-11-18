@@ -4,7 +4,7 @@
    ============================================================ */
 const CONFIG = {
   serverIp: "5.175.213.56:30120",            // e.g. "connect cfx.re/join/abc123"  (leave "" while link is pending)
-  discordUrl: "https://discord.gg/wbwdGgUwBj",          // e.g. "https://discord.gg/yourinvite"
+  discordUrl: "https://discord.gg/G49CB5U6Pu",          // e.g. "https://discord.gg/yourinvite"
   whitelistUrl: ""         // e.g. a Discord channel or Google Form link
 };
 
@@ -54,6 +54,11 @@ $("#copyIpNav").addEventListener("click", copyIp);
 document.querySelectorAll("[data-join]").forEach((el) =>
   el.addEventListener("click", (e) => {
     e.preventDefault();
+    // Join the City always goes to Discord (Copy IP in the nav copies the server IP).
+    if (CONFIG.discordUrl) {
+      window.open(CONFIG.discordUrl, "_blank", "noopener");
+      return;
+    }
     copyIp();
   })
 );
