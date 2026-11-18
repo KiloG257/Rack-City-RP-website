@@ -161,7 +161,6 @@ a { color: inherit; text-decoration: none; }
 .title { display: block; line-height: 0; }
 .title-img {
   width: min(640px, 100%); height: auto; display: block;
-  mix-blend-mode: screen; /* drops the black background so only the lettering shows */
   animation: titleGlow 3.5s ease-in-out infinite;
 }
 @keyframes titleGlow {
