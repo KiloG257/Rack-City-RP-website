@@ -158,10 +158,15 @@ a { color: inherit; text-decoration: none; }
   0%, 100% { box-shadow: 0 0 0 2px rgba(255, 80, 60, .55), 0 0 22px rgba(224, 42, 42, .35); }
   50%      { box-shadow: 0 0 0 2px rgba(255, 110, 80, 1),  0 0 70px rgba(255, 40, 30, .85); }
 }
-.title { animation: titleGlow 3.5s ease-in-out infinite; }
+.title { display: block; line-height: 0; }
+.title-img {
+  width: min(640px, 100%); height: auto; display: block;
+  mix-blend-mode: screen; /* drops the black background so only the lettering shows */
+  animation: titleGlow 3.5s ease-in-out infinite;
+}
 @keyframes titleGlow {
-  0%, 100% { filter: drop-shadow(0 0 4px rgba(224, 42, 42, .15)); }
-  50%      { filter: drop-shadow(0 0 22px rgba(255, 40, 30, .75)); }
+  0%, 100% { filter: brightness(.82) saturate(.9) drop-shadow(0 0 6px rgba(224, 42, 42, .25)); }
+  50%      { filter: brightness(1.18) saturate(1.25) drop-shadow(0 0 28px rgba(255, 40, 30, .9)); }
 }
 .logo-tag {
   position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%);
